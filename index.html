@@ -1,0 +1,527 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+
+	<title>期末web实训</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		body{
+			font-family: "Microsoft YaHei","SimSun";
+			height: 100%;
+			width: 100%;
+			background-color: #D2E9FF;
+			/* background-image: url(imgs/bjt.jpg);
+			 */
+		}
+		html{
+			height: 100%;
+			width: 100%;
+		}
+		.changlan{
+			height: 75px;
+			background-color:#ACD6FF;
+		}
+		.changlan .juzhonglan{
+			width: 1300px;
+			height: 75px;
+			margin: 0 auto;
+			background-color: #ACD6FF;
+		}
+		.changlan .juzhonglan h1{
+			padding-left: 15px;
+			width: 360px;
+			height: 75px;
+			float: left;
+			padding-right: 60px;
+		}
+		.changlan .juzhonglan .daohanglan{
+			width: 1200px;
+			height: 75px;
+		}
+		.changlan .juzhonglan .daohanglan ul{
+			/* 去除小圆点 */
+			list-style-type: none;
+		}
+		.changlan .juzhonglan .daohanglan ul li{
+			width: 120px;
+			height: 75px;
+			float: left;
+			/* 分割a标签的颜色（暂红） */
+			border-left:1px solid gray;
+			/* 对几个li 进行文字居中和行高设定  */
+			text-align: center;
+			line-height: 75px;
+			text-decoration: none;
+			color: black;
+			font-size:22px;/* 字体大小 */
+			font-family:"Microsoft YaHei","SimSun";/* 字体类型   */ 
+			font-weight: 600;/* 字体加粗100-900 */
+		}
+		.changlan .juzhonglan .daohanglan ul li.last{
+			border-right:1px solid gray; 
+		}
+		.changlan .juzhonglan .daohanglan ul li a{
+			/* 对a标签转块元素，使我们点击时的位置大一点  */
+			display: block;
+			width: 120px;
+			height: 75px;
+			text-decoration:none;
+			color: black;
+			font-size: 22px; 
+		}
+		.changlan .juzhonglan .daohanglan ul li a:hover{
+			/* a的伪类，设置点击a的时候的形态 */
+			background-color: #CAFFFF;
+		}
+		.piang{
+			clear: both;/* 清除浮动 */
+		}
+		/* 轮番转换图片 */
+		.box{
+				 /* width:1500px; */
+				/* height: 600px; */
+				/* border:1px solid red; */
+				margin:auto;
+				margin-top:0px;
+				background-repeat: no-repeat;
+				background-size: cover;
+				background-size: 100% 100%;
+			}
+			/*.box img{
+				width: 1000px;
+				height: 600px;
+			}*/
+			#pic{       /* 图片的样式 */
+				width:1300px;
+				height:400px;
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+			}
+			/* .btn{  上一张、下一张按钮的样式
+				width:120px;
+				height:40px;
+				margin-top: */
+			
+			/* 以上是轮番滚动图片 */
+			.chaxunlan{
+				height: 400px;
+				width: 1300px;
+				/* background-color: green; */
+			}
+			.chaxunlan .left{
+				height: 400px;
+				width: 250px;
+				float: left;
+				margin-left: 0px;
+				background-color:#ACD6FF;
+			}
+			.chaxunlan .right{
+				height: 400px;
+				width: 1050px;
+				
+                 float: left;
+				
+			}
+			.chaxunlan .right .r1{
+				height: 400px;
+				width: 600px;
+				float: left;
+				margin-left: 20px;
+				background-color: black;
+			} 
+			.chaxunlan .right .r2{
+				height: 400px;
+				width: 320px;
+				float: left;
+				background-color:#ACD6FF ;
+				margin-left: 20px;
+				padding-left: 15px;
+				padding-right: 15px;
+				border-top:1px solid gray;
+				border-bottom:1px solid gray;
+				border-left:1px solid gray;
+				border-right:1px solid gray;
+				
+			} 
+			/* 录音试验 */
+			 .r2 h3 {
+            text-align: center;
+            
+        }
+
+        .massge {
+            height: 200px;
+            width: 300px;
+  
+            overflow-y: auto;
+        }
+
+        .massge audio {
+            height: 20px;
+            width: 250px;
+        }
+        .zyt{
+        	padding-top: 100px;
+        }
+        /* 录音试验 */
+
+			.chaxunlan .right .r2 .kcjs{
+				text-align: center;
+				font-size: 30px;
+				font-weight: 500;
+			}
+			.chaxunlan .right .r2 .nr{
+			
+				font-size: 20px;
+				font-weight: 400;
+			}
+			
+			.chaxunlan .left ul{
+			/* 去除小圆点 */
+			list-style-type: none;
+		}
+			
+		.chaxunlan .left ul li{
+			height: 56px;
+			width: 250px;
+			float: left;
+			/* 分割a标签的颜色（暂红） */
+			border-top:1px solid gray;
+			/* 对几个li 进行文字居中和行高设定  */
+			text-align: center;
+			line-height: 56px;
+			text-decoration: none;
+			font-size:21px;/* 字体大小 */
+			font-family:"Microsoft YaHei","SimSun";/* 字体类型   */ 
+			font-weight: 530;/* 字体加粗100-900 */
+		}
+		.chaxunlan .left ul li.last2{
+			border-bottom:1px solid gray;
+		}
+		.chaxunlan .left ul li a{
+			/* 对a标签转块元素，使我们点击时的位置大一点  */
+			display: block;
+			
+			height: 56px;
+			text-decoration:none;
+			color: black;
+			font-size: 21px; 
+		}
+
+		.chaxunlan .left ul li a:hover{
+			/* a的伪类，设置点击a的时候的形态 */
+			background-color: #CAFFFF;
+		}
+
+		/* 下拉菜单样式 */
+		.xlcd li{
+			margin-left:0px;
+			height:70px;
+			clear:both;
+		}
+		/*下拉内容格式*/
+.xlcd{
+list-style-type:none;
+display:none;
+min-width:100px;
+background-color: #87CEEB;
+}
+
+/*鼠标移上去后修改下拉菜单链接颜色 */
+.last2 li a:hover{color:black;}
+
+/*在鼠标移上去后显示下拉菜单*/
+.last2:hover .xlcd{
+	display:block;
+   /*  margin-bottom: 20px; */
+}
+
+       .daohanglan li a{
+       	display:inline-block;
+       	height:70px;
+        text-decoration:none;
+        color:#755B5C;
+        width:150px;
+        line-height:70px;
+    }
+    /* 下拉菜单以上 */
+		.dibu{
+			width: 1300px;
+			height: 250px;
+			margin-top: 60px;
+		}
+		.dibu ul{
+			list-style: none;
+		}
+		.dibu ul li{
+			float: left;
+			width: 240px;
+			height: 250px;
+			margin-right: 50px;
+		}
+		.dibu ul li.one{
+			margin-left: 70px;
+		}
+		.dibu ul li img{
+			width: 100%;
+			height: 190px;
+		}
+		.dibu ul li h5{
+			color: green;
+			text-align: center;
+			font-size: 20px;
+		}
+		.zuidibu{
+			width: 1000px;
+			height: 100px;
+			margin-top: 20px;
+			margin-left: 40px;
+			
+			font-size: 50px;
+		}
+	</style>
+</head>	
+<body>
+	<div class="changlan">
+		<div class="juzhonglan">
+			<h1><img src="imgs/imgs/logo.png" /></h1>
+			<div class="daohanglan">
+				<ul>
+					<li><a href="https://baike.sogou.com/v279603.htm?fromTitle=%E7%8E%89%E6%9E%97%E5%B8%88%E8%8C%83%E5%AD%A6%E9%99%A2&ch=sogou.college.vr" target="_blank">学校简介</a></li>
+					<li><a href="msp.html" target="_blank">校园美食篇</a></li>
+					<li><a href="">校园美景篇</a></li>
+					<li><a href="">学习篇</a></li>
+					<li><a href="">课外娱乐篇</a></li>
+					<li class="last"><a href="">其他</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="qiang"></div>
+	<!-- <div class="zhanban"></div> -->
+	<!-- 轮番滚动图片区 -->
+	<div class="box"><!--  box：播放图片的区域 -->
+			<img id="pic" src="imgs/imgs/1.jpg" />
+	</div>
+		<div>
+				<input type="button" class="btn"  value="上一张"/>
+				<input type="button" class="btn" value="下一张" />
+		</div>
+	
+	<div class="chaxunlan">
+         <div class="left">
+         	<ul>
+         		<li><a href="">学习篇</a></li>
+         		<li><a href="">选课</a></li>
+         		<li><a href="">个人课表查询</a></li>
+         		<li><a href="">进入课程学习</a></li>
+         		<li><a href="">进入考试</a></li>
+         		<li><a href="">成绩查询</a></li>
+         		<li class="last2"><a href="">学校排名</a>
+         			<ul class="xlcd">
+         				<li>
+         					下拉菜单
+         				</li>
+         			</ul>
+         		</li>
+         
+         	</ul>
+         </div>
+        <div class="right"> 
+            <div class="r1">
+            	<video controls id="videoPlayer"
+            	width="600" height="400" 
+                autoplay="autoplay">
+            	       <source src="imgs/imgs/movie.ogg" type="video/ogg" />
+            	       <source scr="movie.ogg" type="video/mp4"/>
+            	</video>
+            </div>
+            <!-- 录音试验 -->
+                 <div class="r2">
+                <h3>提问内容如下：</h3>
+                <div class="massge" id="massge">
+
+                </div>
+                <div class="zyt">
+                	<p>提出问题：</p>
+                    <form name="input">
+                        <input type="text" name="qs" placeholder=" 请输入......" id="qst">
+                        <input type="button" value="录音" onclick="luyin()">
+                        <input type="button" value="提交" onclick="sendAll()"><br>
+                        <p></p>
+
+                    </form>
+                </div>
+            </div>
+            	
+          
+         </div>
+        
+	</div>
+
+	<div class="dibu">
+		<ul>
+			<li class="one">
+				<p>
+					<img src="imgs/imgs/7.png">
+				</p>
+				<h5><a href="">语文学习</a></h5>
+			</li>
+			<li><p>
+					<img src="imgs/imgs/8.png">
+				</p>
+				<h5><a href="">数学学习</a></h5>
+			</li>
+			<li><p>
+					<img src="imgs/imgs/13.png">
+				</p>
+				<h5><a href="">地理学习</a></h5>
+			</li>
+			<li><p>
+					<img src="imgs/imgs/14.png">
+				</p>
+				<h5><a href="">化学学习</a></h5>
+			</li>
+		</ul>
+	</div>
+	<div class="zuidibu">厚德博学，知行合一</div>
+</body>
+
+<script>
+			var pic=document.getElementById("pic");
+			var preBtn=document.getElementsByClassName("btn")[0];
+			var nextBtn=document.getElementsByClassName("btn")[1];
+//			
+			preBtn.onclick=function()
+			{
+				n--;
+				if(n==0)
+				{
+					n=6;
+				}
+				pic.src="imgs/imgs/"+n+".jpg"
+			}
+			nextBtn.onclick=function(){
+				picLunH();
+			}
+			var n=1;
+			function picLunH(){
+				n++;
+				if(n==7)
+				{
+					n=1;
+				}
+				pic.src="imgs/imgs/"+n+".jpg"
+				
+			}
+			setInterval(picLunH,2000);
+		</script>		
+	<!-- 上为轮番滚动图片区 -->
+<script>
+    //监听播放时间
+    var video = document.getElementById('videoPlayer');
+    //当前播放的视频
+    var currVideo=1;
+    //使用事件监听方式捕捉事件
+    video.addEventListener("timeupdate", function () {
+        //获取当前播放进度
+        time=Math.floor(video.currentTime);
+     
+        //当视频播放到 4s的时候做处理
+        //由于利用video.currentTime获取到的秒数是浮点数,
+        //而且每次获取的视频的播放进度的步长都不相同
+        //所以不能用timeDisplay==4.0来判断视频当前的播放进度是否为前4秒
+        if (time==4.0) {//触发暂停事件
+            video.pause();
+            video.currentTime+=1;
+
+            var reason=prompt("1.这个视频的主要内容是什么？", "");
+            while(reason!="不知道") {//判断是否填写正确答案
+                alert("答案错误,请重新作答!!");
+                reason=prompt("1.这个视频的主要内容是什么？", "");
+            }
+            video.play();
+        }
+
+         if (time==10.0) {//触发暂停事件
+            video.pause();
+            video.currentTime+=1;
+
+            var reason=prompt("2.视频内的主要人物有哪三个？", "");
+            while(reason!="你我他") {//判断是否填写正确答案
+                alert("答案错误,请重新作答!!");
+                reason=prompt("2.视频内的主要人物有哪三个？", "");
+            }
+            video.play();
+        }
+        if (time==20.0) {//触发暂停事件
+            video.pause();
+            video.currentTime+=1;
+
+            var reason=prompt("3.学习了“鼻涕急救”视频后你有什么收获？", "");
+            while(reason!="收获很大") {//判断是否填写正确答案
+                alert("答案错误,请重新作答!!");
+                reason=prompt("3.学习了“鼻涕急救”视频后你有什么收获？", "");
+            }
+            video.play();
+        }
+
+
+
+        
+    }, false);
+</script>
+<!-- </body> -->
+<!-- </html> -->
+<script>
+    // 录音
+    var flage = true
+    var luyin = function () {
+        recOpen(
+            function () {
+                {
+                    rec.start();
+                    flage = false
+                }
+            }
+        )
+    }
+    var luyinst = function () {
+        recStop();
+    }
+    // 文字
+    let left = false;
+    var talk = document.getElementById('massge');
+    let send = function () {
+        let node = document.createElement('p');
+        let div = document.createElement('div');
+        div.className = 'wall';
+        let textNode = document.createTextNode(document.getElementById('qst').value);
+        node.appendChild(textNode);
+        node.className = 'ltalk';
+        div.appendChild(node);
+        talk.appendChild(div);
+        document.getElementById('qst').value = "";
+
+    }
+    let sendAll = function () {
+        send();
+        luyinst();
+
+    }
+
+</script>
+<!-- 导入录音模块 -->
+<script src="js/录音模块/recorder-core.js"></script>
+<script src="js/录音模块/engine/mp3.js"></script>
+<script src="js/录音模块/engine/mp3-engine.js"></script>
+<script src="js/录音模块/extensions/waveview.js"></script>
+<script src="js/index.js"></script>
+
+</html>
